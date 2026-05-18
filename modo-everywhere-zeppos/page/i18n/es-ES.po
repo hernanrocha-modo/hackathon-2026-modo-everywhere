@@ -1,0 +1,14 @@
+msgid "appName"
+msgstr "MODO"
+
+msgid "btn_transport_qr"
+msgstr "QR Transporte"
+
+msgid "qr_loading"
+msgstr "Generando QR…"
+
+msgid "qr_expires_in"
+msgstr "Expira en"
+
+msgid "qr_tap_to_close"
+msgstr "Tocá para cerrar"
