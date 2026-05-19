@@ -1,6 +1,6 @@
 import {
   BG_STYLE,
-  TITLE_STYLE,
+  LOGO_STYLE,
   PRIMARY_BTN_STYLE,
 } from "./index.style";
 
@@ -11,7 +11,7 @@ Page({
     logger.debug("home build");
 
     hmUI.createWidget(hmUI.widget.FILL_RECT, BG_STYLE);
-    hmUI.createWidget(hmUI.widget.TEXT, TITLE_STYLE);
+    hmUI.createWidget(hmUI.widget.IMG, LOGO_STYLE);
 
     hmUI.createWidget(hmUI.widget.BUTTON, {
       ...PRIMARY_BTN_STYLE,

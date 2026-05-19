@@ -13,16 +13,15 @@ export const BG_STYLE = {
   radius: 0,
 };
 
-export const TITLE_STYLE = {
-  text: gettext("appName"),
-  x: 0,
-  y: px(90),
-  w: W,
-  h: px(50),
-  color: COLOR.WHITE,
-  text_size: px(34),
-  align_h: hmUI.align.CENTER_H,
-  align_v: hmUI.align.CENTER_V,
+const LOGO_W = px(280);
+const LOGO_H = px(64);
+
+export const LOGO_STYLE = {
+  x: (W - LOGO_W) / 2,
+  y: px(85),
+  w: LOGO_W,
+  h: LOGO_H,
+  src: "image/logo_modo.png",
 };
 
 export const PRIMARY_BTN_STYLE = {

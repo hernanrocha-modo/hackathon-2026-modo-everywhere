@@ -7,6 +7,7 @@ const QR_IMAGES = [
   "qr/qr-error.png",
   "qr/qr-invalid.png",
   "qr/qr-no-balance.png",
+  "qr/qr-vqr.png",
 ];
 
 // Mantener la pantalla siempre encendida mientras el QR está visible.
