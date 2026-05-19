@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#0369a1"/>
+  <text x="256" y="190" text-anchor="middle" font-size="128" fill="white">🚌</text>
+  <text x="256" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="112" font-weight="800" fill="white" letter-spacing="8">SUBE</text>
+  <text x="256" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="44" font-weight="500" fill="#bae6fd">Lector QR</text>
+</svg>
