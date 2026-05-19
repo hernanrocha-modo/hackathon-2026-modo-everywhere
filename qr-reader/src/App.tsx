@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { Scanner } from './components/Scanner'
 import { Result } from './components/Result'
 import { Loading } from './components/Loading'
@@ -11,6 +11,21 @@ function App() {
   const [resultType, setResultType] = useState<ResultType>('success')
   const scannerResetRef = useRef<(() => void) | null>(null)
   const processingRef = useRef(false)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+
+  useEffect(() => {
+    const onChange = () => setIsFullscreen(!!document.fullscreenElement)
+    document.addEventListener('fullscreenchange', onChange)
+    return () => document.removeEventListener('fullscreenchange', onChange)
+  }, [])
+
+  const toggleFullscreen = useCallback(() => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen()
+    } else {
+      document.documentElement.requestFullscreen()
+    }
+  }, [])
 
   const parseQrResult = (data: string): ResultType => {
     try {
@@ -113,6 +128,17 @@ function App() {
           </div>
         )}
       </main>
+
+      {!isFullscreen && (
+        <button className="fullscreen-btn" onClick={toggleFullscreen} aria-label="Pantalla completa">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+            <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+            <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+            <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+          </svg>
+        </button>
+      )}
     </div>
   )
 }
